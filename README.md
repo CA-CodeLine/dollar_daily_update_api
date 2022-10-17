@@ -2,6 +2,12 @@
 
 ### How to run
 
+Build container
+
+```
+docker-compose build
+```
+
 Install dependencies
 
 ```
@@ -11,7 +17,7 @@ docker-compose run --rm app bundle install
 Create and Migrate database
 
 ```
-docker-compose run --rm app rails dev:setup
+docker-compose run --rm app rails db:setup
 ```
 
 Run server
