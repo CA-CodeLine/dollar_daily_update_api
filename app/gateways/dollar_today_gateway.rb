@@ -7,7 +7,7 @@ class DollarTodayGateway
   end
 
   def execute
-    return_object
+    response_object
   end
 
   def page
@@ -22,7 +22,7 @@ class DollarTodayGateway
     @dollar_value ||= page.search('#cotacao input#nacional').last.values.last
   end
 
-  def return_object
+  def response_object
     { symbol:, value: dollar_value.tr(',', '.').to_f, description: "#{symbol} #{dollar_value}" }
   end
 end
